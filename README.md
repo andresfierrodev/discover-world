@@ -2,6 +2,10 @@
 
 A travel discovery project that started as a Web Technologies project at FH Joanneum and is now becoming a long-term project that I want to develop further throughout my studies.
 
+## Live Demo
+
+[Open Discover.World](https://andresfierrodev.github.io/discover-world/)
+
 ## About the project
 
 Discover.World is a travel platform concept focused on discovering cities, places and experiences.
