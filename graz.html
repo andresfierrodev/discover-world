@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover.Graz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar--city" id="cityNav">
+
+        <a href="index.html" class="nav-back" aria-label="Zurück zur Weltkarte">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          World
+        </a>
+
+        <div class="logo logo--city">
+          Discover<span class="logo-dot">.</span><span class="logo-city">World</span>
+        </div>
+
+        <button class="toggle-btn toggle-btn--icon" id="toggleBtn" aria-label="Dark/Light Mode umschalten">
+          <span id="toggleIcon">🌙</span>
+        </button>
+
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO — Graz fotos slideshow -->
+      <section class="city-hero" aria-label="Graz hero slideshow">
+        <div class="city-slides">
+          <div class="city-slide active" style="background-image: url('images/graz/graz2-opt.jpg');"></div>
+          <div class="city-slide" style="background-image: url('images/graz/graz5-opt.jpg');"></div>
+          <div class="city-slide" style="background-image: url('images/graz/graz3-opt.jpg');"></div>
+          <div class="city-slide" style="background-image: url('images/graz/graz6-opt.jpg'); background-position: center 40%;"></div>
+          <div class="city-slide" style="background-image: url('images/graz/graz1-opt.jpg');"></div>
+          <div class="city-slide" style="background-image: url('images/graz/graz4-opt.jpg');"></div>
+        </div>
+        <div class="city-hero-overlay"></div>
+
+        <div class="city-hero-content">
+          <p class="city-eyebrow">Steiermark · Austria · UNESCO City</p>
+          <h1 class="city-title">
+            Discover<br>
+            <em>Graz</em>
+          </h1>
+          <p class="city-sub">Not a tourist pamphlet. A real guide to what makes Graz worth the trip.</p>
+          <div class="city-hero-actions">
+            <a href="#spots" class="btn-primary">Explore Spots →</a>
+            <a href="#galerie" class="btn-ghost">View Gallery</a>
+          </div>
+        </div>
+
+        <p class="city-place-label"></p>
+
+        <div class="city-dots" id="cityDots" role="tablist"></div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-bar" aria-label="Graz in Zahlen">
+        <div class="stat"><span class="stat-number">280k</span><span class="stat-label">Residents</span></div>
+        <div class="stat"><span class="stat-number">2000+</span><span class="stat-label">Years old</span></div>
+        <div class="stat"><span class="stat-number">24</span><span class="stat-label">Spots</span></div>
+        <div class="stat"><span class="stat-number">6</span><span class="stat-label">Districts</span></div>
+      </section>
+
+      <!-- BESCHREIBUNG — casual Style -->
+      <section class="section city-about" id="about">
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="section-eyebrow">About the city</p>
+            <h2 class="section-title">Graz, aber ehrlich.</h2>
+            <div class="about-tips">
+              <div class="about-tip">
+                <span class="tip-icon">🛒</span>
+                <p>Supermärkte schließen sonntags. Und wir meinen wirklich <em>alle</em>. Einkaufen am Samstagabend, nicht am Sonntagmorgen.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">🎶</span>
+                <p>Ab 22 Uhr kein Lärm im Freien, die Nachbarn hören alles. Partys finden drinnen statt.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">🚲</span>
+                <p>Fahrrad ist König. Die Altstadt ist klein genug, dass man fast alles zu Fuß oder mit dem Rad erreicht.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">☕</span>
+                <p>Kaffeehaus Kultur ist hier ernst gemeint. Man bestellt einen Kaffee und bleibt zwei Stunden, das ist normal und erwünscht.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-quick">
+            <h3 class="about-quick-title">Quick info</h3>
+            <ul class="quick-list">
+              <li><span class="quick-label">Language</span><span class="quick-value">German / Styrian dialect</span></li>
+              <li><span class="quick-label">Currency</span><span class="quick-value">Euro (€)</span></li>
+              <li><span class="quick-label">Time zone</span><span class="quick-value">CET / UTC+1</span></li>
+              <li><span class="quick-label">Best season</span><span class="quick-value">May – September</span></li>
+              <li><span class="quick-label">Airport</span><span class="quick-value">GRZ — 15 min from city</span></li>
+              <li><span class="quick-label">Emergency</span><span class="quick-value">112</span></li>
+              <li><span class="quick-label">Bus info</span><span class="quick-value"><a href="https://www.verbundlinie.at" target="_blank" rel="noopener" class="quick-link">verbundlinie.at →</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPOTS — cards + filter (JS aus JSON) -->
+      <section class="section" id="spots">
+        <div class="section-header">
+          <h2 class="section-title">Top Spots</h2>
+          <a href="#spots-table" class="section-link">Alle anzeigen ↓</a>
+        </div>
+        <div class="filter-row">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="food">Food</button>
+          <button class="filter" data-filter="culture">Culture</button>
+          <button class="filter" data-filter="nature">Nature</button>
+          <button class="filter" data-filter="nightlife">Nightlife</button>
+        </div>
+        <div class="cards-grid" id="cardsGrid"></div>
+      </section>
+
+      
+      <!-- GALERIE -->
+      <section class="section gallery-full" id="galerie">
+        <div class="section-header">
+          <h2 class="section-title">Galerie</h2>
+          <p class="section-sub">Klick auf ein Foto zum Vergrößern</p>
+        </div>
+        <div class="gallery-masonry">
+          <div class="gallery-card tall" data-name="Hauptplatz" data-tag="Historic center" data-desc="Das Herz von Graz — barocke Architektur und das lebhafte Treiben am Hauptplatz.">
+            <div class="gallery-img" style="background-image:url('images/graz/graz2-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Hauptplatz</span><span class="glass-tag">Historic center</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Landhaus" data-tag="Architecture" data-desc="Der prächtige Renaissance-Innenhof des Grazer Landhauses — abends besonders beeindruckend.">
+            <div class="gallery-img" style="background-image:url('images/graz/graz5-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Landhaus</span><span class="glass-tag">Architecture</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Murinsel bei Nacht" data-tag="Nightlife" data-desc="Die Murinsel leuchtet nachts blau — einer der ikonischsten Anblicke von Graz.">
+            <div class="gallery-img" style="background-image:url('images/graz/graz3-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Murinsel bei Nacht</span><span class="glass-tag">Nightlife</span></div>
+          </div>
+          <div class="gallery-card tall" data-name="Uhrturm" data-tag="Schlossberg" data-desc="Das Wahrzeichen von Graz — der Uhrturm auf dem Schlossberg mit Blick über die Stadt.">
+            <div class="gallery-img" style="background-image:url('images/graz/graz6-opt.jpg'); background-size:cover; background-position:center 40%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Uhrturm</span><span class="glass-tag">Schlossberg</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Eggenberg Schloss" data-tag="Culture" data-desc="Barockschloss am Stadtrand — UNESCO-Weltkulturerbe und verstecktes Juwel von Graz.">
+            <div class="gallery-img" style="background-image:url('images/graz/graz1-opt.jpg'); background-size:cover; background-position:center 35%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Schloss Eggenberg</span><span class="glass-tag">Culture</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Liebesschlösser" data-tag="Romantic" data-desc="Liebesschlösser an der Murbrücke — ein romantisches Graz-Ritual seit Jahrzehnten.">
+            <div class="gallery-img" style="background-image:url('images/graz/graz4-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Liebesschlösser</span><span class="glass-tag">Romantic</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBIR FOTO — feature comunitaria -->
+      <section class="section photo-upload-section">
+        <div class="section-header">
+          <h2 class="section-title">Dein Graz</h2>
+          <p class="section-sub">Teile dein liebstes Foto aus der Stadt</p>
+        </div>
+        <div class="upload-grid" id="userPhotosGrid"></div>
+        <div class="upload-form-wrap">
+          <div class="upload-form" id="uploadForm">
+            <div class="upload-drop-area" id="uploadDropArea">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <p class="upload-drop-text">Foto hier ablegen oder <label for="photoInput" class="upload-browse">durchsuchen</label></p>
+              <input type="file" id="photoInput" accept="image/*" aria-label="Foto auswählen" />
+            </div>
+            <div class="form-group">
+              <label for="photoComment">Kommentar</label>
+              <input type="text" id="photoComment" placeholder="Was zeigt das Foto?" maxlength="80" />
+            </div>
+            <button class="btn-primary" id="uploadSubmitBtn">Foto teilen →</button>
+            <p class="form-feedback" id="uploadFeedback"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVE BANNER — LocalStorage JS #07 -->
+      <section class="save-banner" aria-label="Spots speichern">
+        <div class="save-banner-text">
+          <p class="save-banner-title">Save your favourite spots.</p>
+          <p class="save-banner-sub">Stays saved even after you close the tab.</p>
+        </div>
+        <a href="#spots" class="btn-primary">Try it →</a>
+      </section>
+
+    </main>
+
+    <!-- GLASSMORPHISM MODAL -->
+    <div class="glass-modal" id="glassModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="glass-modal-backdrop" id="modalBackdrop"></div>
+      <div class="glass-modal-card">
+        <div class="glass-modal-img" id="modalImg"></div>
+        <div class="glass-modal-content">
+          <p class="glass-modal-tag" id="modalTag"></p>
+          <h2 class="glass-modal-title" id="modalTitle" aria-live="polite">Galerie</h2>
+          <p class="glass-modal-desc" id="modalDesc"></p>
+          <button class="glass-modal-close" id="modalClose" aria-label="Schließen">✕ Schließen</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Discover<span>.</span>Graz</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/spots-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

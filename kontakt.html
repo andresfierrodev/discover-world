@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt — Discover Graz</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">discover<span>.</span>graz</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="spots.html">Spots</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html" class="nav-pill active">Kontakt</a></li>
+        </ul>
+        <button class="toggle-btn" id="toggleBtn" aria-label="Dark/Light Mode umschalten">
+          <span id="toggleIcon">🌙</span>
+          <span id="toggleLabel">Dark</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="hero-eyebrow">Know a hidden gem?</p>
+          <h1 class="page-title">Kontakt</h1>
+          <p class="page-sub">Suggest a spot. We'll check it out.</p>
+        </div>
+      </section>
+
+      <section class="section contact-section">
+        <div class="contact-grid">
+
+          <div class="contact-info">
+            <h2 class="contact-heading">Get in touch</h2>
+            <p class="contact-text">
+              Found a place that deserves to be on this guide?
+              Tell us about it — we're always looking for the next hidden gem in Graz.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span class="contact-icon">📍</span>
+                <span>Graz, Steiermark, Austria</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="contact-form-wrap">
+            <div class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Dein Name" />
+              </div>
+              <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" placeholder="deine@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="spot">Spot vorschlagen</label>
+                <input type="text" id="spot" placeholder="Name des Spots" />
+              </div>
+              <div class="form-group">
+                <label for="message">Beschreibung</label>
+                <textarea id="message" rows="4" placeholder="Was macht diesen Ort besonders?"></textarea>
+              </div>
+              <button class="btn-primary btn-full" id="submitBtn">Absenden →</button>
+              <p class="form-feedback" id="formFeedback"></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">discover<span>.</span>graz</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/spots-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

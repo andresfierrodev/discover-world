@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spots — Discover Graz</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">discover<span>.</span>graz</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="spots.html" class="active">Spots</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="kontakt.html" class="nav-pill">Kontakt</a></li>
+        </ul>
+        <button class="toggle-btn" id="toggleBtn" aria-label="Dark/Light Mode umschalten">
+          <span id="toggleIcon">🌙</span>
+          <span id="toggleLabel">Dark</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="hero-eyebrow">24 places · Graz, Austria</p>
+          <h1 class="page-title">Top Spots</h1>
+          <p class="page-sub">Where locals actually go.</p>
+        </div>
+      </section>
+
+      <!-- CARDS With FILTROS -->
+      <section class="section">
+        <div class="filter-row">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="food">Food</button>
+          <button class="filter" data-filter="culture">Culture</button>
+          <button class="filter" data-filter="nature">Nature</button>
+          <button class="filter" data-filter="nightlife">Nightlife</button>
+        </div>
+        <div class="cards-grid" id="cardsGrid"></div>
+      </section>
+
+      <!-- TABLA SORTING -->
+      <section class="section spots-table-section">
+        <div class="section-header">
+          <h2 class="section-title">Alle Spots — Übersicht</h2>
+          <p class="section-sub">Klick auf eine Spalte zum Sortieren</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="spots-table" id="spotsTable" aria-label="Spots Übersicht">
+            <thead>
+              <tr>
+                <th class="sortable" data-col="name" aria-sort="none">
+                  Spot <span class="sort-icon">↕</span>
+                </th>
+                <th class="sortable" data-col="category" aria-sort="none">
+                  Kategorie <span class="sort-icon">↕</span>
+                </th>
+                <th class="sortable" data-col="rating" aria-sort="none">
+                  Rating <span class="sort-icon">↕</span>
+                </th>
+                <th class="sortable" data-col="distance" aria-sort="none">
+                  Entfernung <span class="sort-icon">↕</span>
+                </th>
+                <th>Gespeichert</th>
+              </tr>
+            </thead>
+            <tbody id="spotsTableBody">
+              <!-- Generado dinámicamente por JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">discover<span>.</span>graz</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/spots-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

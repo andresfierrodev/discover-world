@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerie — Discover Graz</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="logo">discover<span>.</span>graz</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Start</a></li>
+          <li><a href="spots.html">Spots</a></li>
+          <li><a href="galerie.html" class="active">Galerie</a></li>
+          <li><a href="kontakt.html" class="nav-pill">Kontakt</a></li>
+        </ul>
+        <button class="toggle-btn" id="toggleBtn" aria-label="Dark/Light Mode umschalten">
+          <span id="toggleIcon">🌙</span>
+          <span id="toggleLabel">Dark</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="page-hero">
+        <div class="page-hero-content">
+          <p class="hero-eyebrow">Graz durch unsere Linse</p>
+          <h1 class="page-title">Galerie</h1>
+          <p class="page-sub">The city, frame by frame.</p>
+        </div>
+      </section>
+
+      <!-- GALERÍA -->
+      <section class="section gallery-full">
+        <div class="gallery-masonry">
+
+          <div class="gallery-card tall" data-name="Hauptplatz" data-tag="Historic center" data-desc="Das Herz von Graz — barocke Architektur und lebhafter Markt.">
+            <div class="gallery-img img-hauptplatz"></div>
+            <div class="gallery-glass">
+              <span class="glass-name">Hauptplatz</span>
+              <span class="glass-tag">Historic center</span>
+            </div>
+          </div>
+
+          <div class="gallery-card short" data-name="Murinsel" data-tag="Architecture" data-desc="Eine schwimmende Insel in der Mur — Café und Architektur in einem.">
+            <div class="gallery-img img-murinsel"></div>
+            <div class="gallery-glass">
+              <span class="glass-name">Murinsel</span>
+              <span class="glass-tag">Architecture</span>
+            </div>
+          </div>
+
+          <div class="gallery-card short" data-name="Schlossberg" data-tag="Panorama view" data-desc="Der Hausberg von Graz — beste Aussicht auf die Altstadt.">
+            <div class="gallery-img img-schlossberg"></div>
+            <div class="gallery-glass">
+              <span class="glass-name">Schlossberg</span>
+              <span class="glass-tag">Panorama view</span>
+            </div>
+          </div>
+
+          <div class="gallery-card tall" data-name="Kunsthaus" data-tag="Contemporary art" data-desc="Das 'freundliche Alien' — Gegenwartskunst in ikonischer Architektur.">
+            <div class="gallery-img img-kunsthaus"></div>
+            <div class="gallery-glass">
+              <span class="glass-name">Kunsthaus</span>
+              <span class="glass-tag">Contemporary art</span>
+            </div>
+          </div>
+
+          <div class="gallery-card short" data-name="Stadtpark" data-tag="Nature" data-desc="Die grüne Lunge der Stadt — perfekt für Spaziergänge.">
+            <div class="gallery-img img-stadtpark"></div>
+            <div class="gallery-glass">
+              <span class="glass-name">Stadtpark</span>
+              <span class="glass-tag">Nature</span>
+            </div>
+          </div>
+
+          <div class="gallery-card short" data-name="Lendplatz" data-tag="Local market" data-desc="Lokaler Markt jeden Samstagvormittag — frisch und authentisch.">
+            <div class="gallery-img img-lendplatz"></div>
+            <div class="gallery-glass">
+              <span class="glass-name">Lendplatz</span>
+              <span class="glass-tag">Local market</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- GLASSMORPHISM MODAL -->
+    <div class="glass-modal" id="glassModal" aria-hidden="true" role="dialog">
+      <div class="glass-modal-backdrop" id="modalBackdrop"></div>
+      <div class="glass-modal-card">
+        <div class="glass-modal-img" id="modalImg"></div>
+        <div class="glass-modal-content">
+          <p class="glass-modal-tag" id="modalTag"></p>
+          <h2 class="glass-modal-title" id="modalTitle"></h2>
+          <p class="glass-modal-desc" id="modalDesc"></p>
+          <button class="glass-modal-close" id="modalClose" aria-label="Schließen">✕ Schließen</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">discover<span>.</span>graz</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/spots-data.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

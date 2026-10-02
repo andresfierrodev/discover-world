@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover.Tokyo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar--city">
+        <a href="index.html" class="nav-back" aria-label="Back to World">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          World
+        </a>
+        <div class="logo logo--city">
+          Discover<span class="logo-dot">.</span><span class="logo-city">World</span>
+        </div>
+        <button class="toggle-btn toggle-btn--icon" id="toggleBtn" aria-label="Dark/Light Mode">
+          <span id="toggleIcon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="city-hero" aria-label="Tokyo slideshow">
+        <div class="city-slides">
+          <div class="city-slide active" style="background-image:url('images/tokyo/tokio2-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/tokyo/tokio4-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/tokyo/tokio3-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/tokyo/tokio6-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/tokyo/tokio1-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/tokyo/tokio5-opt.jpg'); background-position:center 40%;"></div>
+        </div>
+        <div class="city-hero-overlay"></div>
+        <div class="city-hero-content">
+          <p class="city-eyebrow">Kantō Region · Japan · 37M people</p>
+          <h1 class="city-title">Discover<br><em>Tokyo</em></h1>
+          <p class="city-sub">Chaos and calm, neon and silence — Tokyo contains multitudes. Here's how to navigate them.</p>
+          <div class="city-hero-actions">
+            <a href="#spots" class="btn-primary">Explore Spots →</a>
+            <a href="#galerie" class="btn-ghost">View Gallery</a>
+          </div>
+        </div>
+        <p class="city-place-label"></p>
+        <div class="city-dots" id="cityDots" role="tablist"></div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-bar" aria-label="Tokyo in numbers">
+        <div class="stat"><span class="stat-number">37M</span><span class="stat-label">Residents</span></div>
+        <div class="stat"><span class="stat-number">23</span><span class="stat-label">Districts</span></div>
+        <div class="stat"><span class="stat-number">200k+</span><span class="stat-label">Restaurants</span></div>
+        <div class="stat"><span class="stat-number">2000+</span><span class="stat-label">Years of history</span></div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section city-about" id="about">
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="section-eyebrow">About the city</p>
+            <h2 class="section-title">Tokyo, ehrlich gesagt.</h2>
+            <div class="about-tips">
+              <div class="about-tip">
+                <span class="tip-icon">🚇</span>
+                <p>Die U-Bahn ist das beste Verkehrsmittel, pünktlich auf die Sekunde. Aber während der Rush Hour (8–9h) ist es <em>wirklich</em> eng. Shoulder Bags vorher nach vorne drehen.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">🍜</span>
+                <p>Ramen um 3 Uhr morgens ist völlig normal. Viele der besten Restaurants haben keine Schilder, einfach der Schlange folgen.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">🤫</span>
+                <p>Im öffentlichen Nahverkehr wird nicht telefoniert und kaum gesprochen. Kopfhörer rein, Stimme runter, das ist Respekt, kein Gesetz.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">💴</span>
+                <p>Viele kleine Läden und Restaurants nehmen <em>nur Bargeld</em>. Immer Yen dabei haben, Kreditkarte funktioniert längst nicht überall.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-quick">
+            <h3 class="about-quick-title">Quick info</h3>
+            <ul class="quick-list">
+              <li><span class="quick-label">Language</span><span class="quick-value">Japanese</span></li>
+              <li><span class="quick-label">Currency</span><span class="quick-value">Yen (¥)</span></li>
+              <li><span class="quick-label">Time zone</span><span class="quick-value">JST / UTC+9</span></li>
+              <li><span class="quick-label">Best season</span><span class="quick-value">March–May · Oct–Nov</span></li>
+              <li><span class="quick-label">Airport</span><span class="quick-value">NRT / HND — 30–60 min</span></li>
+              <li><span class="quick-label">Emergency</span><span class="quick-value">110 (police) / 119 (fire)</span></li>
+              <li><span class="quick-label">Metro info</span><span class="quick-value"><a href="https://www.tokyometro.jp/en/" target="_blank" rel="noopener" class="quick-link">tokyometro.jp →</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPOTS -->
+      <section class="section" id="spots">
+        <div class="section-header">
+          <h2 class="section-title">Top Spots</h2>
+          <a href="#spots-table" class="section-link">Alle anzeigen ↓</a>
+        </div>
+        <div class="filter-row">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="food">Food</button>
+          <button class="filter" data-filter="culture">Culture</button>
+          <button class="filter" data-filter="nature">Nature</button>
+          <button class="filter" data-filter="nightlife">Nightlife</button>
+        </div>
+        <div class="cards-grid" id="cardsGrid"></div>
+      </section>
+
+      <!-- GALERIE — CSS #08 Glassmorphism -->
+      <section class="section gallery-full" id="galerie">
+        <div class="section-header">
+          <h2 class="section-title">Galerie</h2>
+          <p class="section-sub">Klick auf ein Foto zum Vergrößern</p>
+        </div>
+        <div class="gallery-masonry">
+          <div class="gallery-card tall" data-name="Tokyo Tower" data-tag="Skyline" data-desc="Der Tokyo Tower bei Nacht — das beleuchtete Herz der Stadt, sichtbar von überall.">
+            <div class="gallery-img" style="background-image:url('images/tokyo/tokio2-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Tokyo Tower</span><span class="glass-tag">Skyline</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Fuji & Pagoda" data-tag="Iconic view" data-desc="Die Chureito Pagode mit dem Fuji im Hintergrund — das klassischste Bild Japans.">
+            <div class="gallery-img" style="background-image:url('images/tokyo/tokio4-opt.jpg'); background-size:cover; background-position:center 38%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Fuji & Pagoda</span><span class="glass-tag">Iconic view</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Meguro River" data-tag="Sakura season" data-desc="Kirschblüten am Meguro-Fluss im März — der romantischste Spaziergang in Tokyo.">
+            <div class="gallery-img" style="background-image:url('images/tokyo/tokio3-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Meguro River</span><span class="glass-tag">Sakura season</span></div>
+          </div>
+          <div class="gallery-card tall" data-name="Sakura & Fuji" data-tag="Nature" data-desc="Fuji-san encuadrado por ramas de cerezo — una vista que solo dura dos semanas al año.">
+            <div class="gallery-img" style="background-image:url('images/tokyo/tokio6-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Sakura & Fuji</span><span class="glass-tag">Nature</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Old Streets" data-tag="Culture" data-desc="Kimono-Trägerinnen in den alten Gassen — traditionelles Japan mitten in der Metropole.">
+            <div class="gallery-img" style="background-image:url('images/tokyo/tokio5-opt.jpg'); background-size:cover; background-position:center 40%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Old Streets</span><span class="glass-tag">Culture</span></div>
+          </div>
+          <div class="gallery-card short" data-name="Mt. Fuji" data-tag="Day trip" data-desc="Der heilige Berg Japans — perfekt erreichbar als Tagesausflug von Tokyo.">
+            <div class="gallery-img" style="background-image:url('images/tokyo/tokio1-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Mt. Fuji</span><span class="glass-tag">Day trip</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEIN TOKYO -->
+      <section class="section photo-upload-section">
+        <div class="section-header" style="justify-content:center; text-align:center;">
+          <div>
+            <h2 class="section-title">Dein Tokyo</h2>
+            <p class="section-sub">Teile dein liebstes Foto aus der Stadt</p>
+          </div>
+        </div>
+        <div class="upload-grid" id="userPhotosGrid"></div>
+        <div class="upload-form-wrap">
+          <div class="upload-form" id="uploadForm">
+            <div class="upload-drop-area" id="uploadDropArea">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <p class="upload-drop-text">Foto hier ablegen oder <label for="photoInput" class="upload-browse">durchsuchen</label></p>
+              <input type="file" id="photoInput" accept="image/*" aria-label="Foto auswählen" />
+            </div>
+            <div class="form-group">
+              <label for="photoComment">Kommentar</label>
+              <input type="text" id="photoComment" placeholder="Was zeigt das Foto?" maxlength="80" />
+            </div>
+            <button class="btn-primary" id="uploadSubmitBtn">Foto teilen →</button>
+            <p class="form-feedback" id="uploadFeedback"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVE BANNER -->
+      <section class="save-banner" aria-label="Spots speichern">
+        <div class="save-banner-text">
+          <p class="save-banner-title">Save your favourite spots.</p>
+          <p class="save-banner-sub">Stays saved even after you close the tab.</p>
+        </div>
+        <a href="#spots" class="btn-primary">Try it →</a>
+      </section>
+
+    </main>
+
+    <!-- GLASSMORPHISM MODAL — CSS #08 -->
+    <div class="glass-modal" id="glassModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="glass-modal-backdrop" id="modalBackdrop"></div>
+      <div class="glass-modal-card">
+        <div class="glass-modal-img" id="modalImg"></div>
+        <div class="glass-modal-content">
+          <p class="glass-modal-tag" id="modalTag"></p>
+          <h2 class="glass-modal-title" id="modalTitle" aria-live="polite">Galerie</h2>
+          <p class="glass-modal-desc" id="modalDesc"></p>
+          <button class="glass-modal-close" id="modalClose" aria-label="Schließen">✕ Schließen</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Discover<span>.</span>Tokyo</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/spots-data-tokyo.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

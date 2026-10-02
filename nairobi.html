@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover.Nairobi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar--city">
+        <a href="index.html" class="nav-back" aria-label="Back to World">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          World
+        </a>
+        <div class="logo logo--city">
+          Discover<span class="logo-dot">.</span><span class="logo-city">World</span>
+        </div>
+        <button class="toggle-btn toggle-btn--icon" id="toggleBtn" aria-label="Dark/Light Mode">
+          <span id="toggleIcon">🌙</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="city-hero" aria-label="Nairobi slideshow">
+        <div class="city-slides">
+          <div class="city-slide active" style="background-image:url('images/nairobi/nairobi3-opt.jpg'); background-position:center 25%;"></div>
+          <div class="city-slide" style="background-image:url('images/nairobi/nairobi1-opt.jpg'); background-position:center 30%;"></div>
+          <div class="city-slide" style="background-image:url('images/nairobi/nairobi5-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/nairobi/nairobi2-opt.jpg'); background-position:center 28%;"></div>
+          <div class="city-slide" style="background-image:url('images/nairobi/nairobi6-opt.jpg');"></div>
+          <div class="city-slide" style="background-image:url('images/nairobi/nairobi4-opt.jpg'); background-position:center 25%;"></div>
+        </div>
+        <div class="city-hero-overlay"></div>
+        <div class="city-hero-content">
+          <p class="city-eyebrow">East Africa · Kenya · 1,795m above sea level</p>
+          <h1 class="city-title">Discover<br><em>Nairobi</em></h1>
+          <p class="city-sub">Where lions roam minutes from skyscrapers. Africa's most dynamic city doesn't do anything halfway.</p>
+          <div class="city-hero-actions">
+            <a href="#spots" class="btn-primary">Explore Spots →</a>
+            <a href="#galerie" class="btn-ghost">View Gallery</a>
+          </div>
+        </div>
+        <p class="city-place-label"></p>
+        <div class="city-dots" id="cityDots" role="tablist"></div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-bar" aria-label="Nairobi in numbers">
+        <div class="stat"><span class="stat-number">5M+</span><span class="stat-label">Residents</span></div>
+        <div class="stat"><span class="stat-number">1795m</span><span class="stat-label">Altitude</span></div>
+        <div class="stat"><span class="stat-number">117</span><span class="stat-label">Years old</span></div>
+        <div class="stat"><span class="stat-number">Big 5</span><span class="stat-label">In the city</span></div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section city-about" id="about">
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="section-eyebrow">About the city</p>
+            <h2 class="section-title">Nairobi, wie es wirklich ist.</h2>
+            <div class="about-tips">
+              <div class="about-tip">
+                <span class="tip-icon">🦒</span>
+                <p>Der Nairobi National Park liegt <em>direkt an der Stadtgrenze</em>. Löwen, Geparden und Nashörner, mit dem Skyline im Hintergrund. Das gibt es sonst nirgendwo auf der Welt.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">🌡️</span>
+                <p>Nairobi liegt fast genau auf dem Äquator, aber auf 1.800m Höhe, deswegen ist es überraschend kühl. Abends braucht man eine Jacke. Sonnencreme trotzdem nicht vergessen.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">📱</span>
+                <p>M-Pesa ist Pflicht. Fast alles wird mit Handy bezahlt, Nairobi ist in Sachen Mobile Payment <em>weit vor Europa</em>. Karte funktioniert oft nicht in kleineren Läden.</p>
+              </div>
+              <div class="about-tip">
+                <span class="tip-icon">🚕</span>
+                <p>Matatu sind die lokalen Minibusse, laut, bunt und abenteuerlich. Uber und Bolt funktionieren einwandfrei und sind günstiger als in Europa.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-quick">
+            <h3 class="about-quick-title">Quick info</h3>
+            <ul class="quick-list">
+              <li><span class="quick-label">Language</span><span class="quick-value">Swahili & English</span></li>
+              <li><span class="quick-label">Currency</span><span class="quick-value">Kenyan Shilling (KES)</span></li>
+              <li><span class="quick-label">Time zone</span><span class="quick-value">EAT / UTC+3</span></li>
+              <li><span class="quick-label">Best season</span><span class="quick-value">July–Oct · Jan–Feb</span></li>
+              <li><span class="quick-label">Airport</span><span class="quick-value">NBO — 20 min from CBD</span></li>
+              <li><span class="quick-label">Emergency</span><span class="quick-value">999 / 112</span></li>
+              <li><span class="quick-label">Safari info</span><span class="quick-value"><a href="https://www.kws.go.ke" target="_blank" rel="noopener" class="quick-link">kws.go.ke →</a></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPOTS -->
+      <section class="section" id="spots">
+        <div class="section-header">
+          <h2 class="section-title">Top Spots</h2>
+          <a href="#spots-table" class="section-link">Alle anzeigen ↓</a>
+        </div>
+        <div class="filter-row">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="food">Food</button>
+          <button class="filter" data-filter="culture">Culture</button>
+          <button class="filter" data-filter="nature">Nature</button>
+          <button class="filter" data-filter="nightlife">Nightlife</button>
+        </div>
+        <div class="cards-grid" id="cardsGrid"></div>
+      </section>
+
+      <!-- GALERIE — CSS #08 Glassmorphism -->
+      <section class="section gallery-full" id="galerie">
+        <div class="section-header">
+          <h2 class="section-title">Galerie</h2>
+          <p class="section-sub">Klick auf ein Foto zum Vergrößern</p>
+        </div>
+        <div class="gallery-masonry">
+
+          <div class="gallery-card tall" data-name="Giraffe & Skyline" data-tag="Iconic" data-desc="Eine Rothschild-Giraffe mit dem Nairobi Skyline im Hintergrund — das ikonischste Bild dieser Stadt.">
+            <div class="gallery-img" style="background-image:url('images/nairobi/nairobi3-opt.jpg'); background-size:cover; background-position:center 25%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Giraffe & Skyline</span><span class="glass-tag">Iconic</span></div>
+          </div>
+
+          <div class="gallery-card short" data-name="Nairobi Sunset" data-tag="City view" data-desc="Sonnenuntergang über Nairobi — fast täglich spektakulär durch die Höhenlage.">
+            <div class="gallery-img" style="background-image:url('images/nairobi/nairobi1-opt.jpg'); background-size:cover; background-position:center 28%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Nairobi Sunset</span><span class="glass-tag">City view</span></div>
+          </div>
+
+          <div class="gallery-card short" data-name="City by Night" data-tag="Nightlife" data-desc="Nairobi CBD bei Nacht — moderner, dynamischer und überraschend lebhafter als erwartet.">
+            <div class="gallery-img" style="background-image:url('images/nairobi/nairobi5-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">City by Night</span><span class="glass-tag">Nightlife</span></div>
+          </div>
+
+          <div class="gallery-card tall" data-name="Lion Cub" data-tag="Safari" data-desc="Löwenjunges im Nairobi National Park — nur 7km vom Stadtzentrum entfernt.">
+            <div class="gallery-img" style="background-image:url('images/nairobi/nairobi2-opt.jpg'); background-size:cover; background-position:center 28%;"></div>
+            <div class="gallery-glass"><span class="glass-name">Lion Cub</span><span class="glass-tag">Safari</span></div>
+          </div>
+
+          <div class="gallery-card short" data-name="Downtown Nairobi" data-tag="Urban life" data-desc="Das lebhafte Zentrum — bunte Matatus, Jacaranda-Bäume und das Treiben des Alltags.">
+            <div class="gallery-img" style="background-image:url('images/nairobi/nairobi6-opt.jpg'); background-size:cover; background-position:center;"></div>
+            <div class="gallery-glass"><span class="glass-name">Downtown</span><span class="glass-tag">Urban life</span></div>
+          </div>
+
+          <div class="gallery-card short" data-name="African Buffalo" data-tag="Big Five" data-desc="Kaffernbüffel im Nairobi National Park — eines der Big Five, direkt vor der Stadtkulisse.">
+            <div class="gallery-img" style="background-image:url('images/nairobi/nairobi4-opt.jpg'); background-size:cover; background-position:center 25%;"></div>
+            <div class="gallery-glass"><span class="glass-name">African Buffalo</span><span class="glass-tag">Big Five</span></div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- DEIN NAIROBI -->
+      <section class="section photo-upload-section">
+        <div class="section-header" style="justify-content:center; text-align:center;">
+          <div>
+            <h2 class="section-title">Dein Nairobi</h2>
+            <p class="section-sub">Teile dein liebstes Foto aus der Stadt</p>
+          </div>
+        </div>
+        <div class="upload-grid" id="userPhotosGrid"></div>
+        <div class="upload-form-wrap">
+          <div class="upload-form" id="uploadForm">
+            <div class="upload-drop-area" id="uploadDropArea">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              <p class="upload-drop-text">Foto hier ablegen oder <label for="photoInput" class="upload-browse">durchsuchen</label></p>
+              <input type="file" id="photoInput" accept="image/*" aria-label="Foto auswählen" />
+            </div>
+            <div class="form-group">
+              <label for="photoComment">Kommentar</label>
+              <input type="text" id="photoComment" placeholder="Was zeigt das Foto?" maxlength="80" />
+            </div>
+            <button class="btn-primary" id="uploadSubmitBtn">Foto teilen →</button>
+            <p class="form-feedback" id="uploadFeedback"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVE BANNER -->
+      <section class="save-banner" aria-label="Spots speichern">
+        <div class="save-banner-text">
+          <p class="save-banner-title">Save your favourite spots.</p>
+          <p class="save-banner-sub">Stays saved even after you close the tab.</p>
+        </div>
+        <a href="#spots" class="btn-primary">Try it →</a>
+      </section>
+
+    </main>
+
+    <!-- GLASSMORPHISM MODAL — CSS #08 -->
+    <div class="glass-modal" id="glassModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="glass-modal-backdrop" id="modalBackdrop"></div>
+      <div class="glass-modal-card">
+        <div class="glass-modal-img" id="modalImg"></div>
+        <div class="glass-modal-content">
+          <p class="glass-modal-tag" id="modalTag"></p>
+          <h2 class="glass-modal-title" id="modalTitle" aria-live="polite">Galerie</h2>
+          <p class="glass-modal-desc" id="modalDesc"></p>
+          <button class="glass-modal-close" id="modalClose" aria-label="Schließen">✕ Schließen</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Discover<span>.</span>Nairobi</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <script src="js/spots-data-nairobi.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

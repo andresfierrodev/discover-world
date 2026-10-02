@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover.World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="page-world">
+
+    <header>
+      <nav class="navbar navbar--world" id="worldNav">
+
+        <!-- Kein Logo in der Navbar - der Hero-Titel ist ausreichend -->
+
+        <!-- Search overlay -->
+        <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="Search a city..." autocomplete="off" />
+          <button class="search-close-btn" id="searchCloseBtn" aria-label="Suche schließen">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Suggestions dropdown -->
+        <div class="search-suggestions" id="searchSuggestions" aria-live="polite">
+          <a href="graz.html" class="suggestion-item" data-city="graz">
+            <span class="suggestion-emoji">🏰</span>
+            <div class="suggestion-info">
+              <span class="suggestion-name">Graz</span>
+              <span class="suggestion-country">Austria · Europe</span>
+            </div>
+          </a>
+          <a href="tokyo.html" class="suggestion-item" data-city="tokyo">
+            <span class="suggestion-emoji">🗼</span>
+            <div class="suggestion-info">
+              <span class="suggestion-name">Tokyo</span>
+              <span class="suggestion-country">Japan · Asia</span>
+            </div>
+          </a>
+          <a href="nairobi.html" class="suggestion-item" data-city="nairobi">
+            <span class="suggestion-emoji">🦁</span>
+            <div class="suggestion-info">
+              <span class="suggestion-name">Nairobi</span>
+              <span class="suggestion-country">Kenya · Africa</span>
+            </div>
+          </a>
+          <div class="suggestion-item suggestion-item--disabled">
+            <span class="suggestion-emoji">🌍</span>
+            <div class="suggestion-info">
+              <span class="suggestion-name">500+ cities</span>
+              <span class="suggestion-country">Coming soon</span>
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO SLIDESHOW — 10 World Fotos-->
+      <section class="world-hero" aria-label="World destinations slideshow">
+
+        <div class="world-slides" id="worldSlides">
+          <div class="world-slide active" style="background-image: url('images/world/world1-opt.jpg')" data-place="Guatapé" data-country="Colombia"></div>
+          <div class="world-slide" style="background-image: url('images/world/world2-opt.jpg')" data-place="Tokyo" data-country="Japan"></div>
+          <div class="world-slide" style="background-image: url('images/world/world3-opt.jpg')" data-place="Masai Mara" data-country="Kenya"></div>
+          <div class="world-slide" style="background-image: url('images/world/world4-opt.jpg')" data-place="Santorini" data-country="Greece"></div>
+          <div class="world-slide" style="background-image: url('images/world/world5-opt.jpg')" data-place="Machu Picchu" data-country="Peru"></div>
+          <div class="world-slide" style="background-image: url('images/world/world6-opt.jpg')" data-place="New York" data-country="USA"></div>
+          <div class="world-slide" style="background-image: url('images/world/world7-opt.jpg')" data-place="Marrakech" data-country="Morocco"></div>
+          <div class="world-slide" style="background-image: url('images/world/world8-opt.jpg')" data-place="Bali" data-country="Indonesia"></div>
+          <div class="world-slide" style="background-image: url('images/world/world9-opt.jpg')" data-place="Torres del Paine" data-country="Chile"></div>
+          <div class="world-slide" style="background-image: url('images/world/world10-opt.jpg')" data-place="Iceland" data-country="Iceland"></div>
+        </div>
+
+        <div class="world-hero-overlay"></div>
+
+        <!-- C central -->
+        <div class="world-hero-content">
+          <p class="world-eyebrow">Where do you want to go?</p>
+          <h1 class="world-title">
+            Discover<br>
+            <span class="world-title-sub">the World</span>
+          </h1>
+          <p class="world-sub">Real guides, local tips, hidden gems, wherever you go.</p>
+
+          <!-- Suchbereich direkt im Hero -->
+          <div class="hero-search-wrap" id="heroSearchWrap">
+            <button class="world-search-hint" id="heroSearchHint" aria-label="Stadt suchen">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <span>Where to next?</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Guatapé -->
+        <p class="world-place-label" id="worldPlaceLabel">Guatapé, Colombia</p>
+
+        <!-- Navigation Dots -->
+        <div class="world-dots" id="worldDots" role="tablist" aria-label="Slideshow navigation"></div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-logo">Discover<span>.</span>World</div>
+        <p class="footer-copy">© Andres Fierro Ruiz · 2026</p>
+      </div>
+    </footer>
+
+    <!-- Dropdown - position fixed, unabhaengig vom Hero-Overflow -->
+    <div class="hero-dropdown" id="heroDropdown">
+      <a href="graz.html" class="hero-suggestion" data-city="graz">
+        <span class="hero-suggestion-name">Graz</span>
+        <span class="hero-suggestion-country">Austria · Europe</span>
+      </a>
+      <a href="tokyo.html" class="hero-suggestion" data-city="tokyo">
+        <span class="hero-suggestion-name">Tokyo</span>
+        <span class="hero-suggestion-country">Japan · Asia</span>
+      </a>
+      <a href="nairobi.html" class="hero-suggestion" data-city="nairobi">
+        <span class="hero-suggestion-name">Nairobi</span>
+        <span class="hero-suggestion-country">Kenya · Africa</span>
+      </a>
+      <div class="hero-suggestion hero-suggestion--disabled">
+        <span class="hero-suggestion-name">500+ cities</span>
+        <span class="hero-suggestion-country">Coming soon</span>
+      </div>
+    </div>
+
+    <script src="js/main-world.js"></script>
+  </body>
+</html>
